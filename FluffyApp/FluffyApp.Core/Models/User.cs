@@ -7,8 +7,20 @@ using System.Threading.Tasks;
 
 namespace FluffyApp.Core.Models
 {
-    public class User: IdentityUser<Guid>
-    {
-
+  public class User : IdentityUser<Guid>
+  {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Bio { get; set; }
+        public Guid RoleId { get; set; }
+        public string? Education { get; set; }
+        public string? Experience { get; set; }
+        public string? Certificates { get; set; }
+        public string? Twitter { get; set; }
+        public string? Facebook { get; set; }
+        public string? LinkedIn { get; set; }
+        public string? Youtube { get; set; }
+        public Role? Role { get; set; }
+        public ICollection<Tag> Tags { get; set; } = new List<Tag>();
     }
 }
