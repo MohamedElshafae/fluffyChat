@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\QR-Domain\QR-Domain.csproj" />
     <ProjectReference Include="..\QR.Application\QR.Application.csproj" />
     <ProjectReference Include="..\QR.DataLayer\QR.DataLayer.csproj" />
   </ItemGroup>

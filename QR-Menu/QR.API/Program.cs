@@ -68,12 +68,17 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 
-builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+builder.Services.AddCors(options =>
 {
-    builder.AllowAnyOrigin()
-          .AllowAnyMethod()
-          .AllowAnyHeader();
-}));
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 
 var app = builder.Build();
 
