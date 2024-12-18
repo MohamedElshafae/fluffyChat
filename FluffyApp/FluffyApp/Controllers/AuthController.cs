@@ -28,8 +28,8 @@ namespace FluffyApp.Api.Controllers
             _context = context;
         }
 
-        [Authorize]
         [HttpGet("users")]
+        [Authorize]
         public async Task<IActionResult> GetUsers()
         {
             return Ok(await _context.Users.ToListAsync());
@@ -38,7 +38,7 @@ namespace FluffyApp.Api.Controllers
         [HttpGet("roles")]
         public async Task<IActionResult> Role()
         {
-            List<Role> newRoles = [new Role { Id = Guid.NewGuid(), Name = Roles.User.ToString() }, new Role { Id = Guid.NewGuid(), Name = Roles.User.ToString() }];
+            List<Role> newRoles = [new Role { Id = Guid.NewGuid(), Name = Roles.Instructor.ToString() }, new Role { Id = Guid.NewGuid(), Name = Roles.User.ToString() }];
 
             if (!await _context.Roles.AnyAsync())
             {
