@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace QR_Domain.Enums
+{
+    public enum Tags
+    {
+        Math,
+        Science,
+        History,
+        English,
+        ComputerScience,
+        Backend,
+        FrontEnd,
+    }
+}
